@@ -5,7 +5,6 @@ import requests
 import ssl
 import urllib.parse
 import wave
-import wget
 
 try:
     _create_unverified_https_context = ssl._create_unverified_context
