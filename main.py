@@ -52,5 +52,4 @@ class ArianaFrontend:
 
 if __name__ == '__main__':
     a = ArianaFrontend()
-    a.say('سلام')
-    
+    a.say('سلام. این یک متن آزمایشی نِسبَتَن بلند است.')
