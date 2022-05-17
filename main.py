@@ -42,8 +42,8 @@ class ArianaFrontend:
     def say(self, input_text, file_name='tts.wav', keep_file=False):
         input_text = urllib.parse.quote(input_text)
         url = f'https://api.farsireader.com/ArianaCloudService/ReadTextGET?APIKey={os.getenv("ARIANA_KEY")}&Text={input_text}&Speaker=female&Format=wav16&Quality=normal&ToneLevel=8&SpeechSpeedLevel=4'
-        print(url)
-        wget.download(url, file_name)
+        res = requests.get(url)
+        tts = open('tts.wav', 'wb').write(res.content)
         if keep_file:
             pass
         else:
